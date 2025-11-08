@@ -52,15 +52,15 @@ export const TeamPreview = () => {
               className="group text-center animate-fade-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="relative mb-4 overflow-hidden rounded-2xl aspect-square">
+              <div className="relative mb-4 overflow-hidden rounded-3xl aspect-square shadow-soft group-hover:shadow-card transition-all duration-500">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <h3 className="text-lg font-semibold text-foreground mb-1">
+              <h3 className="text-lg font-semibold text-foreground mb-1 group-hover:text-accent transition-colors duration-300">
                 {member.name}
               </h3>
               <p className="text-sm text-muted-foreground">{member.role}</p>

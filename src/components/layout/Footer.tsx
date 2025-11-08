@@ -10,9 +10,9 @@ export const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">K</span>
+                <span className="text-white font-bold text-xl">W</span>
               </div>
-              <span className="text-xl font-bold text-foreground">Kahf</span>
+              <span className="text-xl font-bold text-foreground">Wequi Tech</span>
             </div>
             <p className="text-sm text-muted-foreground">
               Making your online world safe and secure.
@@ -51,8 +51,8 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">
-                <a href="mailto:info@kahf.com" className="hover:text-foreground transition-colors flex items-center gap-2">
-                  <Mail size={16} /> info@kahf.com
+                <a href="mailto:info@wequitech.com" className="hover:text-foreground transition-colors flex items-center gap-2">
+                  <Mail size={16} /> info@wequitech.com
                 </a>
               </li>
               <li className="text-sm text-muted-foreground">
@@ -83,7 +83,7 @@ export const Footer = () => {
 
         <div className="border-t border-border mt-8 pt-8 text-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Kahf. All rights reserved.
+            © {new Date().getFullYear()} Wequi Tech. All rights reserved.
           </p>
         </div>
       </div>

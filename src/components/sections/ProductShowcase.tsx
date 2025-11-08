@@ -1,5 +1,6 @@
 import { Shield, Globe, Users, Zap } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ProductCard } from "@/components/ui/product-card";
 import { Link } from "react-router-dom";
 
 const products = [
@@ -9,7 +10,9 @@ const products = [
     description: "Blocks millions of harmful sites including tracking, ads, and inappropriate content. Premium features include parental controls and app usage restrictions.",
     icon: Shield,
     comingSoon: false,
-    link: "/products",
+    gradient: "from-blue-500/20 to-purple-500/20",
+    iosLink: "#",
+    androidLink: "#",
   },
   {
     id: 2,
@@ -17,7 +20,9 @@ const products = [
     description: "AI-powered browser that detects and blurs indecent images. Built on private and secure foundations for the ideal balance of safety and privacy.",
     icon: Globe,
     comingSoon: false,
-    link: "/products",
+    gradient: "from-purple-500/20 to-pink-500/20",
+    iosLink: "#",
+    androidLink: "#",
   },
   {
     id: 3,
@@ -25,7 +30,7 @@ const products = [
     description: "A community platform connecting like-minded individuals in a safe and moderated environment.",
     icon: Users,
     comingSoon: true,
-    link: "/products",
+    gradient: "from-green-500/20 to-blue-500/20",
   },
   {
     id: 4,
@@ -33,7 +38,7 @@ const products = [
     description: "Next-generation security solution leveraging AI to protect your entire digital ecosystem.",
     icon: Zap,
     comingSoon: true,
-    link: "/products",
+    gradient: "from-orange-500/20 to-red-500/20",
   },
 ];
 
@@ -52,48 +57,23 @@ export const ProductShowcase = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {products.map((product, index) => (
-            <div
+            <ProductCard
               key={product.id}
-              className="group relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 border border-border hover:border-accent/50 animate-fade-up"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              {product.comingSoon && (
-                <div className="absolute top-4 right-4">
-                  <span className="px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/20">
-                    Coming Soon
-                  </span>
-                </div>
-              )}
-
-              <div className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div className="w-14 h-14 bg-gradient-to-br from-accent/20 to-primary/20 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
-                    <product.icon className="text-accent" size={28} />
-                  </div>
-                </div>
-
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-foreground mb-3 group-hover:text-accent transition-colors">
-                    {product.name}
-                  </h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {product.description}
-                  </p>
-
-                  <Link to={product.link}>
-                    <Button variant="outline" size="sm" className="group-hover:border-accent group-hover:text-accent transition-colors">
-                      {product.comingSoon ? "Learn More" : "Explore"}
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
+              name={product.name}
+              description={product.description}
+              icon={product.icon}
+              comingSoon={product.comingSoon}
+              gradient={product.gradient}
+              iosLink={product.iosLink}
+              androidLink={product.androidLink}
+              index={index}
+            />
           ))}
         </div>
 
         <div className="text-center mt-12">
           <Link to="/products">
-            <Button variant="accent" size="lg">
+            <Button variant="accent" size="lg" className="shadow-card hover:shadow-soft hover:scale-105 transition-all duration-300">
               View All Products
             </Button>
           </Link>

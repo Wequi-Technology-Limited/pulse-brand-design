@@ -1,5 +1,6 @@
 import { Shield, Globe, Users, Zap, Lock, Smartphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ProductCard } from "@/components/ui/product-card";
 
 const products = [
   {
@@ -17,6 +18,8 @@ const products = [
     ],
     comingSoon: false,
     gradient: "from-blue-500/20 to-purple-500/20",
+    iosLink: "#",
+    androidLink: "#",
   },
   {
     id: 2,
@@ -33,6 +36,8 @@ const products = [
     ],
     comingSoon: false,
     gradient: "from-purple-500/20 to-pink-500/20",
+    iosLink: "#",
+    androidLink: "#",
   },
   {
     id: 3,
@@ -122,52 +127,19 @@ const Products = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {products.map((product, index) => (
-              <div
+              <ProductCard
                 key={product.id}
-                className="group relative bg-card rounded-2xl p-8 shadow-soft hover:shadow-card transition-all duration-300 border border-border hover:border-accent/50 animate-fade-up"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {product.comingSoon && (
-                  <div className="absolute top-6 right-6">
-                    <span className="px-3 py-1 bg-accent/10 text-accent text-xs font-semibold rounded-full border border-accent/20">
-                      Coming Soon
-                    </span>
-                  </div>
-                )}
-
-                <div className={`w-16 h-16 bg-gradient-to-br ${product.gradient} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <product.icon className="text-accent" size={32} />
-                </div>
-
-                <h2 className="text-3xl font-bold text-foreground mb-2 group-hover:text-accent transition-colors">
-                  {product.name}
-                </h2>
-                
-                <p className="text-accent font-medium mb-4">
-                  {product.tagline}
-                </p>
-
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {product.description}
-                </p>
-
-                <div className="space-y-2 mb-6">
-                  {product.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-start space-x-2">
-                      <div className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                <Button 
-                  variant={product.comingSoon ? "outline" : "default"} 
-                  className="w-full"
-                  disabled={product.comingSoon}
-                >
-                  {product.comingSoon ? "Notify Me" : "Download Now"}
-                </Button>
-              </div>
+                name={product.name}
+                tagline={product.tagline}
+                description={product.description}
+                icon={product.icon}
+                features={product.features}
+                comingSoon={product.comingSoon}
+                gradient={product.gradient}
+                iosLink={product.iosLink}
+                androidLink={product.androidLink}
+                index={index}
+              />
             ))}
           </div>
         </div>
@@ -181,9 +153,9 @@ const Products = () => {
               Ready to Get Started?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Join millions of users who trust Kahf to protect their digital life
+              Join millions of users who trust Wequi Tech to protect their digital life
             </p>
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" className="shadow-card hover:shadow-soft hover:scale-105 transition-all duration-300">
               Download Now
             </Button>
           </div>
