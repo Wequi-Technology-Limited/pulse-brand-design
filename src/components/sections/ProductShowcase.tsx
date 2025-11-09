@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const products = [
   {
     id: 1,
-    name: "Kahf Guard",
+    name: "Wequi Guard",
     description: "Blocks millions of harmful sites including tracking, ads, and inappropriate content. Premium features include parental controls and app usage restrictions.",
     icon: Shield,
     comingSoon: false,
@@ -16,7 +16,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Kahf Browser",
+    name: "Wequi Browser",
     description: "AI-powered browser that detects and blurs indecent images. Built on private and secure foundations for the ideal balance of safety and privacy.",
     icon: Globe,
     comingSoon: false,
@@ -26,7 +26,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Mahfil",
+    name: "Wequi Social",
     description: "A community platform connecting like-minded individuals in a safe and moderated environment.",
     icon: Users,
     comingSoon: true,

@@ -5,7 +5,7 @@ import { ProductCard } from "@/components/ui/product-card";
 const products = [
   {
     id: 1,
-    name: "Kahf Guard",
+    name: "Wequi Guard",
     tagline: "Complete Protection for Your Family",
     description: "Blocks millions of harmful sites including tracking, ads, porn, and harmful ideologies. Enforces Safe-Search and YouTube restrictions to prevent exposure to inappropriate content.",
     icon: Shield,
@@ -23,7 +23,7 @@ const products = [
   },
   {
     id: 2,
-    name: "Kahf Browser",
+    name: "Wequi Browser",
     tagline: "Browse with Privacy & Safety",
     description: "AI-powered browser that runs on your device, detecting indecent images and blurring them as you browse. Built on Brave and DuckDuckGo for ultimate privacy.",
     icon: Globe,
@@ -41,7 +41,7 @@ const products = [
   },
   {
     id: 3,
-    name: "Mahfil",
+    name: "Wequi Social",
     tagline: "Connect in a Safe Community",
     description: "A moderated community platform where like-minded individuals can connect, share, and grow together in a safe, respectful environment.",
     icon: Users,

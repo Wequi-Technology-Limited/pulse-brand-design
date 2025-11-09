@@ -38,11 +38,11 @@ export const Footer = () => {
                   Team
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link to="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                   Careers
                 </Link>
-              </li>
+              </li> */}
             </ul>
           </div>
 

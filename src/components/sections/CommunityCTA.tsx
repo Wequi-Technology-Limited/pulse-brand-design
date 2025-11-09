@@ -40,7 +40,7 @@ export const CommunityCTA = () => {
                 <Github size={24} />
               </a>
               <a
-                href="mailto:info@kahf.com"
+                href="mailto:info@Wequi.com"
                 className="w-14 h-14 flex items-center justify-center rounded-full bg-card hover:bg-accent hover:text-white transition-all duration-300 shadow-soft hover:shadow-card hover:scale-110"
               >
                 <Mail size={24} />

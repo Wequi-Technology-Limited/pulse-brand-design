@@ -26,13 +26,13 @@ const About = () => {
             </h2>
             <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
               <p>
-                Kahf was founded with a simple yet powerful mission: to make the internet a safer place for individuals and families. In an increasingly digital world, online safety has become more critical than ever.
+                Wequi was founded with a simple yet powerful mission: to make the internet a safer place for individuals and families. In an increasingly digital world, online safety has become more critical than ever.
               </p>
               <p>
                 Our team of dedicated professionals combines expertise in technology, security, and user experience to create innovative solutions that protect users without compromising their freedom or privacy.
               </p>
               <p>
-                From our flagship products like Kahf Guard and Kahf Browser to our upcoming community platform Mahfil, we're committed to providing comprehensive protection across all aspects of digital life.
+                From our flagship products like Wequi Guard and Wequi Browser to our upcoming community platform Wequi Social, we're committed to providing comprehensive protection across all aspects of digital life.
               </p>
             </div>
           </div>

@@ -5,27 +5,27 @@ import { Users } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "Ahmed Hassan",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+    name: "Masum Akando",
+    role: "Co-founder & Chief Executive Officer",
+    image: "https://www.anun.xyz/assets/images/leader1.jpg",
   },
   {
     id: 2,
-    name: "Sara Ibrahim",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&h=400&fit=crop",
+    name: "Md. Shanto Hossain",
+    role: "Founder & Chief Technology Officer",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQHc5lrcs3ybDQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667625223156?e=1764201600&v=beta&t=x6NO12Rmcf6nqzZyVpSY07j31SLl7BnRU6wMZYVrE3E",
   },
   {
     id: 3,
-    name: "Omar Yilmaz",
-    role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&h=400&fit=crop",
+    name: "Hriday Karmaker",
+    role: "Co-founder & Senior Vice President (Internal Affairs)",
+    image: "https://www.anun.xyz/assets/images/leader3.jpg",
   },
   {
     id: 4,
-    name: "Fatima Ozkan",
-    role: "Product Designer",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+    name: "Imam Hasan",
+    role: "Product Designer & UX Specialist",
+    image: "https://www.anun.xyz/assets/images/imam.jpg",
   },
 ];
 

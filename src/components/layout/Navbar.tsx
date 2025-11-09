@@ -12,7 +12,7 @@ export const Navbar = () => {
     { to: "/about", label: "About" },
     { to: "/products", label: "Products" },
     { to: "/team", label: "Team" },
-    { to: "/careers", label: "Careers" },
+    // { to: "/careers", label: "Careers" },
     { to: "/contact", label: "Contact" },
   ];
 
