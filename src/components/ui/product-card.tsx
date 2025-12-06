@@ -1,5 +1,5 @@
 import { LucideIcon } from "lucide-react";
-import { Apple, Download, QrCode } from "lucide-react";
+import { Apple, Download, QrCode, Globe } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import QRCode from "react-qr-code";
 import { useState, useEffect } from "react";
@@ -14,29 +14,35 @@ interface ProductCardProps {
   gradient: string;
   iosLink?: string;
   androidLink?: string;
+  websiteLink?: string; // 👈 NEW
   index?: number;
 }
 
 // Portal component for modal
-const QRModal = ({ isOpen, onClose, iosLink, androidLink }: { 
-  isOpen: boolean; 
-  onClose: () => void; 
-  iosLink?: string; 
-  androidLink?: string; 
+const QRModal = ({
+  isOpen,
+  onClose,
+  iosLink,
+  androidLink,
+}: {
+  isOpen: boolean;
+  onClose: () => void;
+  iosLink?: string;
+  androidLink?: string;
 }) => {
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') onClose();
+      if (e.key === "Escape") onClose();
     };
 
     if (isOpen) {
-      document.addEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'hidden';
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
-      document.removeEventListener('keydown', handleEscape);
-      document.body.style.overflow = 'unset';
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
     };
   }, [isOpen, onClose]);
 
@@ -44,10 +50,7 @@ const QRModal = ({ isOpen, onClose, iosLink, androidLink }: {
 
   return (
     <div className="fixed inset-0 bg-background/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 animate-in fade-in-0">
-      <div 
-        className="absolute inset-0" 
-        onClick={onClose}
-      />
+      <div className="absolute inset-0" onClick={onClose} />
       <div className="bg-card rounded-3xl p-8 max-w-md w-full border border-border/50 shadow-2xl relative z-10 animate-in zoom-in-95">
         <div className="flex justify-between items-center mb-6">
           <h3 className="text-xl font-bold text-foreground">Scan to Download</h3>
@@ -60,14 +63,14 @@ const QRModal = ({ isOpen, onClose, iosLink, androidLink }: {
             ×
           </Button>
         </div>
-        
+
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {iosLink && (
             <div className="flex flex-col items-center space-y-3">
               <div className="bg-white p-4 rounded-2xl border-2 border-border/50 hover:border-accent/50 transition-colors duration-300">
-                <QRCode 
-                  value={iosLink} 
-                  size={140} 
+                <QRCode
+                  value={iosLink}
+                  size={140}
                   style={{ height: "auto", maxWidth: "100%", width: "100%" }}
                 />
               </div>
@@ -86,9 +89,9 @@ const QRModal = ({ isOpen, onClose, iosLink, androidLink }: {
           {androidLink && (
             <div className="flex flex-col items-center space-y-3">
               <div className="bg-white p-4 rounded-2xl border-2 border-border/50 hover:border-accent/50 transition-colors duration-300">
-                <QRCode 
-                  value={androidLink} 
-                  size={140} 
+                <QRCode
+                  value={androidLink}
+                  size={140}
                   style={{ height: "auto", maxWidth: "100%", width: "100%" }}
                 />
               </div>
@@ -125,6 +128,7 @@ export const ProductCard = ({
   gradient,
   iosLink,
   androidLink,
+  websiteLink, // 👈 NEW
   index = 0,
 }: ProductCardProps) => {
   const [showQRCodes, setShowQRCodes] = useState(false);
@@ -165,9 +169,9 @@ export const ProductCard = ({
                 className="h-10 px-3 rounded-xl border border-border/50 hover:border-accent/50 hover:bg-accent/10 transition-all duration-300 group/qr"
                 onClick={() => setShowQRCodes(true)}
               >
-                <QrCode 
-                  size={18} 
-                  className="mr-2 text-muted-foreground group-hover/qr:text-accent transition-colors" 
+                <QrCode
+                  size={18}
+                  className="mr-2 text-muted-foreground group-hover/qr:text-accent transition-colors"
                 />
                 <span className="text-sm font-medium text-muted-foreground group-hover/qr:text-accent transition-colors">
                   Show QR
@@ -205,43 +209,66 @@ export const ProductCard = ({
             </div>
           )}
 
-          {/* Download buttons */}
-          {!comingSoon ? (
-            <div className="grid grid-cols-2 gap-3">
-              <Button
-                variant="default"
-                className="w-full group/btn hover:scale-105 transition-all duration-300 shadow-soft"
-                onClick={() => iosLink && window.open(iosLink, "_blank")}
-              >
-                <Apple size={18} className="mr-2 group-hover/btn:animate-pulse" />
-                iOS
-              </Button>
+          {/* Actions: website + downloads / notify */}
+          <div className="space-y-3">
+            {/* Website button – shown whenever you have a site */}
+            {websiteLink && (
               <Button
                 variant="outline"
-                className="w-full group/btn hover:scale-105 transition-all duration-300 hover:border-accent hover:text-accent"
-                onClick={() => androidLink && window.open(androidLink, "_blank")}
+                className="w-full group/btn hover:scale-105 transition-all duration-300 hover:border-accent hover:text-white"
+                onClick={() => window.open(websiteLink, "_blank")}
               >
-                <Download
+                <Globe
                   size={18}
                   className="mr-2 group-hover/btn:animate-pulse"
                 />
-                Android
+                Visit Website
               </Button>
-            </div>
-          ) : (
-            <Button
-              variant="outline"
-              className="w-full hover:border-accent hover:text-accent transition-all duration-300"
-              disabled
-            >
-              Notify Me
-            </Button>
-          )}
+            )}
+
+            {/* Download buttons */}
+            {!comingSoon ? (
+              <div className="grid grid-cols-2 gap-3">
+                <Button
+                  variant="default"
+                  className="w-full group/btn hover:scale-105 transition-all duration-300 shadow-soft"
+                  onClick={() => iosLink && window.open(iosLink, "_blank")}
+                >
+                  <Apple
+                    size={18}
+                    className="mr-2 group-hover/btn:animate-pulse"
+                  />
+                  iOS
+                </Button>
+                <Button
+                  variant="outline"
+                  className="w-full group/btn hover:scale-105 transition-all duration-300 hover:border-accent hover:text-accent"
+                  onClick={() =>
+                    androidLink && window.open(androidLink, "_blank")
+                  }
+                >
+                  <Download
+                    size={18}
+                    className="mr-2 group-hover/btn:animate-pulse"
+                  />
+                  Android
+                </Button>
+              </div>
+            ) : (
+              <Button
+                variant="outline"
+                className="w-full hover:border-accent hover:text-accent transition-all duration-300"
+                disabled
+              >
+                Notify Me
+              </Button>
+            )}
+          </div>
         </div>
       </div>
 
       {/* QR Modal - Rendered outside the card */}
-      <QRModal 
+      <QRModal
         isOpen={showQRCodes}
         onClose={() => setShowQRCodes(false)}
         iosLink={iosLink}

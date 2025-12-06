@@ -1,5 +1,8 @@
 import { Link } from "react-router-dom";
 import { Mail, Linkedin, Twitter, Github, Instagram } from "lucide-react";
+import Logo from "@/assets/wequitech_transparant.png"; // adjust path
+
+
 
 export const Footer = () => {
   return (
@@ -9,10 +12,14 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">W</span>
-              </div>
-              <span className="text-xl font-bold text-foreground">Wequi Tech</span>
+
+              <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                <img
+                  src={Logo}
+                  alt="Wequi tech logo"
+                  className="h-[110px] w-auto"
+                />
+              </span>
             </div>
             <p className="text-sm text-muted-foreground">
               Making your online world safe and secure.
@@ -65,16 +72,16 @@ export const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://www.linkedin.com/company/wequi" className="text-muted-foreground hover:text-accent transition-colors">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://twitter.com/wequi" className="text-muted-foreground hover:text-accent transition-colors">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://www.instagram.com/wequi" className="text-muted-foreground hover:text-accent transition-colors">
                 <Instagram size={20} />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-accent transition-colors">
+              <a href="https://github.com/Wequi-Technology-Limited" className="text-muted-foreground hover:text-accent transition-colors">
                 <Github size={20} />
               </a>
             </div>

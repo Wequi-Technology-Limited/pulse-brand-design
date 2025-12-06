@@ -16,31 +16,31 @@ export const CommunityCTA = () => {
 
             <div className="flex flex-wrap justify-center gap-4 mb-8">
               <a
-                href="#"
+                href="https://www.linkedin.com/company/wequi"
                 className="w-14 h-14 flex items-center justify-center rounded-full bg-card hover:bg-accent hover:text-white transition-all duration-300 shadow-soft hover:shadow-card hover:scale-110"
               >
                 <Linkedin size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/wequi"
                 className="w-14 h-14 flex items-center justify-center rounded-full bg-card hover:bg-accent hover:text-white transition-all duration-300 shadow-soft hover:shadow-card hover:scale-110"
               >
                 <Twitter size={24} />
               </a>
               <a
-                href="#"
+                href="https://www.linkedin.com/company/wequi"
                 className="w-14 h-14 flex items-center justify-center rounded-full bg-card hover:bg-accent hover:text-white transition-all duration-300 shadow-soft hover:shadow-card hover:scale-110"
               >
                 <Instagram size={24} />
               </a>
               <a
-                href="#"
+                href="https://github.com/Wequi-Technology-Limited"
                 className="w-14 h-14 flex items-center justify-center rounded-full bg-card hover:bg-accent hover:text-white transition-all duration-300 shadow-soft hover:shadow-card hover:scale-110"
               >
                 <Github size={24} />
               </a>
               <a
-                href="mailto:info@Wequi.com"
+                href="mailto:info@wequitech.com"
                 className="w-14 h-14 flex items-center justify-center rounded-full bg-card hover:bg-accent hover:text-white transition-all duration-300 shadow-soft hover:shadow-card hover:scale-110"
               >
                 <Mail size={24} />

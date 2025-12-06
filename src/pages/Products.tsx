@@ -20,6 +20,7 @@ const products = [
     gradient: "from-blue-500/20 to-purple-500/20",
     iosLink: "#",
     androidLink: "#",
+    websiteLink: "https://protect.wequitech.com"
   },
   {
     id: 2,

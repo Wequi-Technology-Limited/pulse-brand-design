@@ -4,6 +4,9 @@ import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+import Logo from "@/assets/wequitech_transparant.png"; // adjust path
+
+
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,10 +24,14 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center transition-transform group-hover:scale-110">
-              <span className="text-white font-bold text-xl">W</span>
-            </div>
-            <span className="text-xl font-bold text-foreground">Wequi Tech</span>
+
+            <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+              <img
+                src={Logo}
+                alt="Wequi tech logo"
+                className="h-[110px] w-auto"
+              />
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

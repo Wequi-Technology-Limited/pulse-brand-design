@@ -68,12 +68,11 @@ export const Hero = () => {
 
           {/* Enhanced description */}
           <p className="text-xl md:text-2xl text-foreground/90 mb-12 max-w-3xl mx-auto leading-relaxed font-medium backdrop-blur-sm bg-background/30 rounded-2xl p-6 border border-border/20">
-            Protecting your digital life with <span className="font-bold text-accent">cutting-edge solutions</span> for a safer, more secure internet experience. 
+            A modern tech company with <span className="font-bold text-accent">moral,ethical</span> and safe technology for people. 
             <span className="block mt-3 text-lg text-foreground/80 font-normal">
-              Enterprise-grade security made simple for everyone.
+              Empowering a safe and ethical digital life.
             </span>
           </p>
-
           {/* Enhanced CTA buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
             <Link to="/products">

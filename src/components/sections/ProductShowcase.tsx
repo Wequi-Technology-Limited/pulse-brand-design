@@ -13,6 +13,7 @@ const products = [
     gradient: "from-blue-500/20 to-purple-500/20",
     iosLink: "#",
     androidLink: "#",
+    websiteLink: "https://protect.wequitech.com"
   },
   {
     id: 2,
@@ -23,6 +24,8 @@ const products = [
     gradient: "from-purple-500/20 to-pink-500/20",
     iosLink: "#",
     androidLink: "#",
+    websiteLink: "https://protect.wequitech.com"
+
   },
   {
     id: 3,
@@ -66,6 +69,7 @@ export const ProductShowcase = () => {
               gradient={product.gradient}
               iosLink={product.iosLink}
               androidLink={product.androidLink}
+              websiteLink={product.websiteLink} // 👈 new prop
               index={index}
             />
           ))}
