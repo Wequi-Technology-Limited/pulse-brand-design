@@ -5,7 +5,7 @@ export type ContactMessage = {
   message: string;
 };
 
-const DEFAULT_ENDPOINT = "/.netlify/functions/send-email";
+const DEFAULT_ENDPOINT = "/api/send-email";
 
 export async function sendContactEmail(payload: ContactMessage) {
   const endpoint = import.meta.env.VITE_CONTACT_ENDPOINT || DEFAULT_ENDPOINT;
