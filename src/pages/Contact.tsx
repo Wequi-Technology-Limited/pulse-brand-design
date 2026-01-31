@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { sendContactEmail } from "@/lib/email";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,9 +13,10 @@ const Contact = () => {
     subject: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Simple form validation
@@ -27,14 +29,27 @@ const Contact = () => {
       return;
     }
 
-    // Success message
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you soon.",
-    });
+    try {
+      setIsSubmitting(true);
+      await sendContactEmail(formData);
 
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
+      toast({
+        title: "Message Sent!",
+        description: "Thank you for contacting us. We'll get back to you soon.",
+      });
+
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message : "Failed to send message.";
+      toast({
+        title: "Unable to send",
+        description: message,
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -192,8 +207,8 @@ const Contact = () => {
                   />
                 </div>
 
-                <Button type="submit" variant="hero" className="w-full">
-                  Send Message
+                <Button type="submit" variant="hero" className="w-full" disabled={isSubmitting} aria-busy={isSubmitting}>
+                  {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </div>
