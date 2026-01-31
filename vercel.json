@@ -9,6 +9,6 @@
   ],
   "routes": [
     { "src": "/api/send-email", "dest": "/api/send-email.ts" },
-    { "src": "/(.*)", "dest": "/" }
+    { "src": "/((?!api/)[^.]*)", "dest": "/index.html" }
   ]
 }
