@@ -63,7 +63,7 @@ export const Footer = () => {
                 </a>
               </li>
               <li className="text-sm text-muted-foreground">
-                Istanbul, Turkey
+                Dhaka, Bangladesh
               </li>
             </ul>
           </div>

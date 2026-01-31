@@ -129,7 +129,7 @@ const Contact = () => {
                     <p className="text-muted-foreground">
                       Istanbul Technology Park<br />
                       Sanayi Mahallesi, Teknopark Bulvari<br />
-                      34906 Pendik, Istanbul, Turkey
+                      34906 Pendik, Dhaka, Bangladesh
                     </p>
                   </div>
                 </div>
