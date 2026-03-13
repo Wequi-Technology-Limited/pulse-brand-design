@@ -1,0 +1,16 @@
+[
+  {
+    "relation": [
+      "delegate_permission/common.handle_all_urls"
+    ],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.wequitech.wequi_guard",
+      "sha256_cert_fingerprints": [
+        "2B:1C:D4:17:00:ED:53:83:17:93:BE:A6:D6:3E:7E:3E:DB:97:8C:D1:63:E8:74:45:8F:FA:15:FA:B3:63:20:B7",
+        "79:C7:F7:23:35:4B:F7:5C:CE:B2:DC:2B:A6:A1:65:A7:A2:1C:34:A0:DE:3F:67:AA:54:C2:C9:33:73:5B:DA:88",
+        "56:77:16:32:84:89:03:FB:32:24:A0:86:1E:E9:40:25:59:1B:2B:9A:52:11:A5:CF:57:52:CA:56:D7:A2:EE:47"
+      ]
+    }
+  }
+]
