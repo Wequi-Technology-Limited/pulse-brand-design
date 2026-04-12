@@ -2,9 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Mail, MapPin, Globe, FileText } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { sendContactEmail } from "@/lib/email";
+import { SEO } from "@/components/SEO";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -60,32 +62,37 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-16">
-      {/* Hero Section */}
+      <SEO
+        title="Contact Wequi Tech | Support and verification"
+        description="Contact Wequi Tech for support, startup verification, partnership inquiries, and Wequi Guard product questions."
+        pathname="/contact"
+      />
+
       <section className="bg-gradient-hero py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center animate-fade-up">
             <h1 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Get In Touch
+              Contact Wequi Tech
             </h1>
             <p className="text-xl text-muted-foreground">
-              Have questions? We'd love to hear from you.
+              Reach us for support, startup verification, product questions, or
+              partnership inquiries.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Content */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Contact Information */}
             <div className="space-y-8 animate-fade-up">
               <div>
                 <h2 className="text-3xl font-bold text-foreground mb-6">
                   Contact Information
                 </h2>
                 <p className="text-muted-foreground mb-8">
-                  Reach out to us through any of these channels. We're here to help!
+                  This page is intended to help reviewers, users, and partners
+                  quickly verify the company, product, and public contact route.
                 </p>
               </div>
 
@@ -107,16 +114,28 @@ const Contact = () => {
 
                 <div className="flex items-start space-x-4">
                   <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Phone className="text-accent" size={24} />
+                    <Globe className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Phone</h3>
+                    <h3 className="font-semibold text-foreground mb-1">Domains</h3>
                     <a
-                      href="tel:+902121234567"
+                      href="https://wequitech.com"
+                      target="_blank"
+                      rel="noreferrer"
                       className="text-muted-foreground hover:text-accent transition-colors"
                     >
-                      +90 212 123 45 67
+                      wequitech.com
                     </a>
+                    <p>
+                      <a
+                        href="https://protect.wequitech.com"
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        protect.wequitech.com
+                      </a>
+                    </p>
                   </div>
                 </div>
 
@@ -125,23 +144,46 @@ const Contact = () => {
                     <MapPin className="text-accent" size={24} />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">Office</h3>
+                    <h3 className="font-semibold text-foreground mb-1">Region</h3>
                     <p className="text-muted-foreground">
-                      Istanbul Technology Park<br />
-                      Sanayi Mahallesi, Teknopark Bulvari<br />
-                      34906 Pendik, Dhaka, Bangladesh
+                      Dhaka, Bangladesh
                     </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 bg-accent/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <FileText className="text-accent" size={24} />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-foreground mb-1">
+                      Public legal pages
+                    </h3>
+                    <div className="flex gap-4 text-muted-foreground">
+                      <Link to="/privacy" className="hover:text-accent transition-colors">
+                        Privacy Policy
+                      </Link>
+                      <Link to="/terms" className="hover:text-accent transition-colors">
+                        Terms of Use
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              {/* Map placeholder */}
-              <div className="bg-muted rounded-2xl h-64 flex items-center justify-center">
-                <p className="text-muted-foreground">Map View</p>
+              <div className="bg-card rounded-2xl border border-border p-8">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
+                  Reviewer Notes
+                </h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>Company: Wequi Tech</p>
+                  <p>Flagship product: Wequi Guard</p>
+                  <p>Product category: digital safety and content filtering</p>
+                  <p>Primary contact: info@wequitech.com</p>
+                </div>
               </div>
             </div>
 
-            {/* Contact Form */}
             <div className="bg-card rounded-2xl p-8 shadow-card border border-border animate-fade-up" style={{ animationDelay: "0.1s" }}>
               <h2 className="text-3xl font-bold text-foreground mb-6">
                 Send us a Message
@@ -173,7 +215,7 @@ const Contact = () => {
                     type="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="your@email.com"
+                    placeholder="you@company.com"
                     required
                   />
                 </div>
@@ -188,7 +230,7 @@ const Contact = () => {
                     type="text"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="What is this about?"
+                    placeholder="Support, verification, partnership, or product question"
                   />
                 </div>
 
@@ -201,7 +243,7 @@ const Contact = () => {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Your message..."
+                    placeholder="Tell us how we can help."
                     rows={6}
                     required
                   />

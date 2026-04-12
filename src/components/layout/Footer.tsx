@@ -1,32 +1,43 @@
 import { Link } from "react-router-dom";
-import { Mail, Linkedin, Twitter, Github, Instagram } from "lucide-react";
+import {
+  Mail,
+  Linkedin,
+  Twitter,
+  Github,
+  Instagram,
+  ExternalLink,
+} from "lucide-react";
 import Logo from "@/assets/wequitech_transparant.png"; // adjust path
-
-
 
 export const Footer = () => {
   return (
     <footer className="bg-card border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-
+            <div className="flex items-center space-x-3">
               <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
                 <img
                   src={Logo}
-                  alt="Wequi tech logo"
-                  className="h-[110px] w-auto"
+                  alt="Wequi Tech logo"
+                  className="h-14 w-auto"
                 />
               </span>
+              <div>
+                <p className="font-semibold text-foreground">Wequi Tech</p>
+                <p className="text-sm text-muted-foreground">
+                  Digital safety startup
+                </p>
+              </div>
             </div>
-            <p className="text-sm text-muted-foreground">
-              Making your online world safe and secure.
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Wequi Tech builds digital safety tools for safer internet use. Our
+              flagship product, Wequi Guard, helps reduce harmful and
+              distracting online content through DNS-based filtering and device
+              protection controls.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="font-semibold text-foreground mb-4">Quick Links</h3>
             <ul className="space-y-2">
@@ -45,17 +56,18 @@ export const Footer = () => {
                   Team
                 </Link>
               </li>
-              {/* <li>
-                <Link to="/careers" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Careers
+              <li>
+                <Link to="/contact" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Contact
                 </Link>
-              </li> */}
+              </li>
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">Contact</h3>
+            <h3 className="font-semibold text-foreground mb-4">
+              Verification
+            </h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">
                 <a href="mailto:info@wequitech.com" className="hover:text-foreground transition-colors flex items-center gap-2">
@@ -65,11 +77,37 @@ export const Footer = () => {
               <li className="text-sm text-muted-foreground">
                 Dhaka, Bangladesh
               </li>
+              <li className="text-sm text-muted-foreground">
+                <a
+                  href="https://protect.wequitech.com"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="hover:text-foreground transition-colors inline-flex items-center gap-2"
+                >
+                  Product site
+                  <ExternalLink size={14} />
+                </a>
+              </li>
+              <li className="text-sm text-muted-foreground">
+                Public website: wequitech.com
+              </li>
             </ul>
           </div>
 
-          {/* Social Media */}
           <div>
+            <h3 className="font-semibold text-foreground mb-4">Legal</h3>
+            <ul className="space-y-2 mb-6">
+              <li>
+                <Link to="/privacy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link to="/terms" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Terms of Use
+                </Link>
+              </li>
+            </ul>
             <h3 className="font-semibold text-foreground mb-4">Follow Us</h3>
             <div className="flex space-x-4">
               <a href="https://www.linkedin.com/company/wequi" className="text-muted-foreground hover:text-accent transition-colors">
