@@ -6,7 +6,7 @@ const About = () => {
     <div className="min-h-screen pt-16">
       <SEO
         title="About Wequi Tech | Digital safety startup"
-        description="Learn what Wequi Tech builds, who Wequi Guard is for, and how to verify the company's public presence."
+        description="Learn who Wequi Tech is, what Wequi Guard does, and how to verify the company's public product and contact presence."
         pathname="/about"
       />
 
@@ -18,6 +18,9 @@ const About = () => {
             </h1>
             <p className="text-xl text-muted-foreground">
               Wequi Tech builds digital safety tools for safer internet use.
+              Our flagship product, Wequi Guard, helps users reduce harmful and
+              distracting online content through DNS-based filtering and device
+              protection controls.
             </p>
           </div>
         </div>
@@ -31,28 +34,32 @@ const About = () => {
                 Company Overview
               </h2>
               <p>
-                Wequi Tech is a startup focused on digital safety, family-safe
-                internet use, and content filtering tools. Our public brand is
-                Wequi Tech and our flagship product is Wequi Guard.
+                Wequi Tech is a digital safety startup focused on safer internet
+                use and practical protection tools for everyday users and
+                families.
               </p>
               <p>
-                Wequi Guard is built to help users reduce harmful and
-                distracting online content using DNS-based filtering and device
-                protection controls. The product is intended for families,
-                parents, guardians, and users who want more control over what
-                can be accessed online.
+                The company&apos;s flagship product is Wequi Guard. Wequi Guard
+                helps reduce harmful and distracting online content through
+                DNS-based filtering and device protection controls, giving users
+                clearer control over what can be accessed online.
               </p>
               <p>
-                Wequi Tech is based in Bangladesh and maintains a public website
-                at wequitech.com, a public product site at
-                protect.wequitech.com, and public contact channels through the
-                company domain.
+                Our mission is to make digital protection simpler, more
+                transparent, and easier to verify for users, reviewers, and
+                partners.
+              </p>
+              <p>
+                Wequi Tech is based in Bangladesh and maintains public
+                verification routes through the company site (wequitech.com),
+                product site (protect.wequitech.com), public contact channels,
+                and legal pages.
               </p>
             </div>
 
             <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
               <p className="text-sm uppercase tracking-[0.2em] text-accent mb-4">
-                Verification Details
+                Company Credibility Snapshot
               </p>
               <div className="space-y-4 text-sm text-muted-foreground">
                 <div>
@@ -60,20 +67,32 @@ const About = () => {
                   <p>Wequi Tech</p>
                 </div>
                 <div>
+                  <p className="font-semibold text-foreground">Core focus</p>
+                  <p>Digital safety and safer internet use</p>
+                </div>
+                <div>
                   <p className="font-semibold text-foreground">Flagship product</p>
                   <p>Wequi Guard</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Product category</p>
-                  <p>Digital safety, content filtering, and family-safe internet tools</p>
+                  <p className="font-semibold text-foreground">What Wequi Guard does</p>
+                  <p>Reduces harmful and distracting online content using DNS-based filtering and device protection controls</p>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Primary audience</p>
                   <p>Families, parents, guardians, and safety-conscious users</p>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">Contact</p>
+                  <p className="font-semibold text-foreground">Business contact</p>
+                  <p>hello@wequitech.com</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Support contact</p>
                   <p>info@wequitech.com</p>
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Public domains</p>
+                  <p>wequitech.com and protect.wequitech.com</p>
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Region</p>
@@ -94,8 +113,9 @@ const About = () => {
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">Mission</h3>
               <p className="text-muted-foreground">
-                Build digital safety tools that are clear, useful, and easier to
-                verify than generic security marketing.
+                Build practical digital safety tools that help users manage
+                online risk with clear controls and verification-friendly public
+                information.
               </p>
             </div>
 
@@ -103,7 +123,7 @@ const About = () => {
               <div className="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
                 <Users className="text-accent" size={28} />
               </div>
-              <h3 className="text-2xl font-bold text-foreground mb-4">Target Market</h3>
+              <h3 className="text-2xl font-bold text-foreground mb-4">Primary Users</h3>
               <p className="text-muted-foreground">
                 Families, parents, guardians, and users who want a safer online
                 environment for everyday internet access.
@@ -115,12 +135,12 @@ const About = () => {
                 <Building2 className="text-accent" size={28} />
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-4">
-                What We Are Building
+                Product Scope
               </h3>
               <p className="text-muted-foreground">
-                Wequi Guard is the current public product. Additional products
-                may be introduced over time, but the company is currently
-                centered on digital safety and DNS-based protection.
+                Wequi Guard is the current public product, and the company is
+                focused on digital protection through filtering and safer
+                browsing controls.
               </p>
             </div>
           </div>
@@ -134,14 +154,15 @@ const About = () => {
               <div className="flex items-center gap-3 mb-4">
                 <Globe className="text-accent" size={24} />
                 <h2 className="text-2xl font-bold text-foreground">
-                  Public Presence
+                  Verification Routes
                 </h2>
               </div>
               <div className="space-y-3 text-muted-foreground">
-                <p>Main website: wequitech.com</p>
-                <p>Product site: protect.wequitech.com</p>
-                <p>Contact route: /contact</p>
-                <p>Legal routes: /privacy and /terms</p>
+                <p>Company website: wequitech.com</p>
+                <p>Flagship product site: protect.wequitech.com</p>
+                <p>Contact page: /contact</p>
+                <p>Team page: /team</p>
+                <p>Legal pages: /privacy and /terms</p>
               </div>
             </div>
 
@@ -149,14 +170,15 @@ const About = () => {
               <div className="flex items-center gap-3 mb-4">
                 <Mail className="text-accent" size={24} />
                 <h2 className="text-2xl font-bold text-foreground">
-                  Team and Contact
+                  Contact and Credibility
                 </h2>
               </div>
               <div className="space-y-3 text-muted-foreground">
-                <p>Public contact email: info@wequitech.com</p>
-                <p>Leadership page: /team</p>
+                <p>Business email: hello@wequitech.com</p>
+                <p>Support email: info@wequitech.com</p>
                 <p>Region: Bangladesh</p>
                 <p>Current flagship product: Wequi Guard</p>
+                <p>Core category: digital safety and safer internet use</p>
               </div>
             </div>
           </div>
