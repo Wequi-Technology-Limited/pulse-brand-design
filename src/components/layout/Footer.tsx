@@ -58,8 +58,13 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground mb-4">Contact</h3>
             <ul className="space-y-2">
               <li className="text-sm text-muted-foreground">
+                <a href="mailto:hello@wequitech.com" className="hover:text-foreground transition-colors flex items-center gap-2">
+                  <Mail size={16} /> Business: hello@wequitech.com
+                </a>
+              </li>
+              <li className="text-sm text-muted-foreground">
                 <a href="mailto:info@wequitech.com" className="hover:text-foreground transition-colors flex items-center gap-2">
-                  <Mail size={16} /> info@wequitech.com
+                  <Mail size={16} /> Support: info@wequitech.com
                 </a>
               </li>
               <li className="text-sm text-muted-foreground">

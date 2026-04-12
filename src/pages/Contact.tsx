@@ -96,12 +96,20 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <a
-                      href="mailto:info@wequitech.com"
-                      className="text-muted-foreground hover:text-accent transition-colors"
-                    >
-                      info@wequitech.com
-                    </a>
+                    <div className="space-y-1">
+                      <a
+                        href="mailto:hello@wequitech.com"
+                        className="block text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        Business: hello@wequitech.com
+                      </a>
+                      <a
+                        href="mailto:info@wequitech.com"
+                        className="block text-muted-foreground hover:text-accent transition-colors"
+                      >
+                        Support: info@wequitech.com
+                      </a>
+                    </div>
                   </div>
                 </div>
 
