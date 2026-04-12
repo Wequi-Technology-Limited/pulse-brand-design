@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { NavLink } from "@/components/NavLink";
 import { Menu, X } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 import Logo from "@/assets/wequitech_transparant.png"; // adjust path
 
@@ -15,7 +14,6 @@ export const Navbar = () => {
     { to: "/about", label: "About" },
     { to: "/products", label: "Products" },
     { to: "/team", label: "Team" },
-    // { to: "/careers", label: "Careers" },
     { to: "/contact", label: "Contact" },
   ];
 
@@ -23,15 +21,22 @@ export const Navbar = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2 group">
-
+          <Link to="/" className="flex items-center space-x-3 group">
             <span className="flex items-center space-x-2 text-2xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               <img
                 src={Logo}
-                alt="Wequi tech logo"
-                className="h-[110px] w-auto"
+                alt="Wequi Tech logo"
+                className="h-12 w-auto sm:h-14"
               />
             </span>
+            <div className="hidden sm:block">
+              <div className="text-base font-semibold text-foreground">
+                Wequi Tech
+              </div>
+              <div className="text-xs text-muted-foreground">
+                Digital safety tools
+              </div>
+            </div>
           </Link>
 
           {/* Desktop Navigation */}
