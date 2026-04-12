@@ -134,7 +134,7 @@ const Products = () => {
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Platform status</p>
-                    <p>Public web presence available. Add confirmed app store links here if needed.</p>
+                    <p>Public web presence available through the main site and product domain.</p>
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Support contact</p>
@@ -145,19 +145,32 @@ const Products = () => {
 
               <div className="rounded-[2rem] border border-border bg-card p-8 shadow-soft">
                 <h3 className="text-2xl font-bold text-foreground mb-6">
-                  Screenshot Placeholders
+                  Product Highlights
                 </h3>
                 <div className="space-y-4">
                   {[
-                    "Add a real screenshot of the Wequi Guard landing screen or dashboard.",
-                    "Add a screenshot showing filter categories, setup, or safe browsing controls.",
-                    "Add a screenshot showing device-level or network-level protection settings.",
+                    {
+                      title: "Category filtering",
+                      description:
+                        "Designed to reduce harmful or distracting web access through DNS-level controls.",
+                    },
+                    {
+                      title: "Household safety focus",
+                      description:
+                        "Built for families and guardians who need clearer everyday internet boundaries.",
+                    },
+                    {
+                      title: "Accessible verification",
+                      description:
+                        "Public company and product routes provide a clear verification trail for users and reviewers.",
+                    },
                   ].map((item) => (
                     <div
-                      key={item}
-                      className="rounded-2xl border border-dashed border-accent/40 bg-accent/5 p-5"
+                      key={item.title}
+                      className="rounded-2xl border border-border/60 bg-background/60 p-5"
                     >
-                      <p className="text-sm text-muted-foreground">{item}</p>
+                      <h4 className="font-semibold text-foreground mb-1">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
                     </div>
                   ))}
                 </div>

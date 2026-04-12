@@ -123,16 +123,31 @@ export const ProductShowcase = () => {
 
           <div className="grid grid-cols-1 gap-4">
             {[
-              "Screenshot placeholder: mobile onboarding or DNS setup",
-              "Screenshot placeholder: filtering categories or dashboard",
-              "Screenshot placeholder: device protection or reporting view",
-            ].map((label) => (
+              {
+                title: "Protection scope",
+                details:
+                  "Covers common harmful categories including malware, scams, adult content, and distracting destinations.",
+              },
+              {
+                title: "Practical setup model",
+                details:
+                  "Built for straightforward rollout in home or personal environments where users need fast and clear controls.",
+              },
+              {
+                title: "Public verification path",
+                details:
+                  "Reviewers and users can verify product positioning and company details through public routes without relying on mock visuals.",
+              },
+            ].map((item) => (
               <div
-                key={label}
-                className="min-h-32 rounded-3xl border border-dashed border-accent/40 bg-accent/5 p-6 flex items-center"
+                key={item.title}
+                className="rounded-3xl border border-border/60 bg-background/70 p-6"
               >
+                <h4 className="text-lg font-semibold text-foreground mb-2">
+                  {item.title}
+                </h4>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  {label}
+                  {item.details}
                 </p>
               </div>
             ))}

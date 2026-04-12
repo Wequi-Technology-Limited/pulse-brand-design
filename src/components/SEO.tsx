@@ -7,7 +7,7 @@ type SEOProps = {
 };
 
 const SITE_URL = "https://wequitech.com";
-const DEFAULT_IMAGE = `${SITE_URL}/placeholder.svg`;
+const DEFAULT_IMAGE = `${SITE_URL}/favicon.ico`;
 
 function upsertMeta(
   selector: string,
