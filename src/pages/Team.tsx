@@ -4,12 +4,12 @@ import { Linkedin, Mail } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "Masum Akando",
+    name: "MD. Tanvirul islam",
     role: "CEO & Founder",
     bio: "Leads Wequi Tech and the company's public digital safety mission.",
-    image: "https://www.anun.xyz/assets/images/leader1.jpg",
-    linkedin: "https://www.linkedin.com/in/masumakando/",
-    email: "masum@wequitech.com",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQFyPdK36qMzQA/profile-displayphoto-shrink_400_400/B56ZY6XF5wGsBE-/0/1744735854756?e=1779321600&v=beta&t=sJjZjGlgqNk49rUnfbfGjIujllgk7W3hpp8C1sgiatY",
+    linkedin: "https://www.linkedin.com/in/tanvirul-islam-swe",
+    email: "tanvir@wequitech.com",
   },
   {
     id: 2,
