@@ -11,7 +11,7 @@ const teamMembers = [
   },
   {
     id: 2,
-    name: "Md. Shanto Hossain",
+    name: "Md. Shanto Hossains",
     role: "Founder & Chief Technology Officer",
     image: "https://media.licdn.com/dms/image/v2/D5603AQHc5lrcs3ybDQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1667625223156?e=1764201600&v=beta&t=x6NO12Rmcf6nqzZyVpSY07j31SLl7BnRU6wMZYVrE3E",
   },
