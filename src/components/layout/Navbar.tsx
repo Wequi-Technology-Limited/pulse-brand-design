@@ -14,6 +14,7 @@ export const Navbar = () => {
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
     { to: "/products", label: "Products" },
+    { to: "/vision", label: "Vision" },
     // { to: "/careers", label: "Careers" },
     { to: "/contact", label: "Contact" },
   ];
