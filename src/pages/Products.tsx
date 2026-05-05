@@ -37,7 +37,7 @@ const products = [
     icon: Globe,
     productLogo: browserLogo,
     features: [
-      "On-device AI image detection",
+      "On-device AI image detection.",
       "Automatic content blurring",
       "Built on Brave & DuckDuckGo",
       "Complete privacy protection",
